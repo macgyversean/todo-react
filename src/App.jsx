@@ -1,7 +1,7 @@
 import Todo from "./components/Todo";
-const taskList = props.tasks?.map((task) => task.name);
 
 function App(props) {
+  const taskList = props.tasks?.map((task) => task.name);
   return (
     <div className="todoapp stack-large">
       <h1>TodoMatic</h1>
@@ -11,13 +11,6 @@ function App(props) {
             What needs to be done?
           </label>
         </h2>
-        <input
-          type="text"
-          id="new-todo-input"
-          className="input input__lg"
-          name="text"
-          autoComplete="off"
-        />
         <button type="submit" className="btn btn__primary btn__lg">
           Add
         </button>
@@ -45,32 +38,11 @@ function App(props) {
         className="todo-list stack-large stack-exception"
         aria-labelledby="list-heading"
       >
-        <Todo name="Eat" id="todo-0" completed />
-        <ul
-          role="list"
-          className="todo-list stack-large stack-exception"
-          aria-labelledby="list-heading"
-        >
-          {taskList}
-        </ul>
+        <Todo name="Eat" />
 
-        <Todo name="Sleep" id="todo-1" />
-        <ul
-          role="list"
-          className="todo-list stack-large stack-exception"
-          aria-labelledby="list-heading"
-        >
-          {taskList}
-        </ul>
+        <Todo name="Sleep" />
 
-        <Todo name="Repeat" id="todo-2" />
-        <ul
-          role="list"
-          className="todo-list stack-large stack-exception"
-          aria-labelledby="list-heading"
-        >
-          {taskList}
-        </ul>
+        <Todo name="Repeat" />
       </ul>
       ;
     </div>
